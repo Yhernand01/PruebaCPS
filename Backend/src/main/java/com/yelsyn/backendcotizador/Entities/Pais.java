@@ -1,14 +1,14 @@
 package com.yelsyn.backendcotizador.Entities;
 
 public class Pais {
-    private int idPais;
+    private int idRegion;
     private String nombrePais;
 
-    public int getIdPais() {
-        return idPais;
+    public int getIdRegion() {
+        return idRegion;
     }
-    public void setIdPais(int idPais) {
-        this.idPais = idPais;
+    public void setIdRegion(int idRegion) {
+        this.idRegion = idRegion;
     }
 
     public String getNombrePais() {
@@ -17,5 +17,4 @@ public class Pais {
     public void setNombrePais(String nombrePais) {
         this.nombrePais = nombrePais;
     }
-
 }

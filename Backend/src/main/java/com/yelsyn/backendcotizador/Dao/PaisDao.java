@@ -17,14 +17,14 @@ public class PaisDao implements PaisInterface {
     public List obtenerPaises() throws SQLException, ClassNotFoundException {
         ResultSet rs = null;
         List<Pais> lstPaises = new ArrayList<>();
-        String sql = "select id_pais, nombre[pais] from env.pais";
+        String sql = "select id_region, nombre[pais] from env.pais";
 
         Conexion conexion = new Conexion();
 
         rs = conexion.ejecutarQuery(sql);
         while(rs.next()){
             Pais pais = new Pais();
-            pais.setIdPais(rs.getInt("id_pais"));
+            pais.setIdRegion(rs.getInt("id_region"));
             pais.setNombrePais(rs.getString("pais"));
             lstPaises.add(pais);
         }
