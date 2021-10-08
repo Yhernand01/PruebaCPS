@@ -1,0 +1,10 @@
+com\yelsyn\backendcotizador\Entities\Pais.class
+com\yelsyn\backendcotizador\Config\Conexion.class
+com\yelsyn\backendcotizador\Dao\PaisDao.class
+com\yelsyn\backendcotizador\Controllers\ClienteController.class
+com\yelsyn\backendcotizador\Dao\ClienteDao.class
+com\yelsyn\backendcotizador\Entities\Cliente.class
+com\yelsyn\backendcotizador\BackendCotizadorApplication.class
+com\yelsyn\backendcotizador\Controllers\PaisController.class
+com\yelsyn\backendcotizador\Interfaces\ClienteInterface.class
+com\yelsyn\backendcotizador\Interfaces\PaisInterface.class
