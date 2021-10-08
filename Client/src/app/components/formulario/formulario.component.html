@@ -1,0 +1,49 @@
+<form action="" class="form-control">
+    <div class="row bajar">
+        <div class="col col-xs-2">
+            <label for="codigo_cliente">Código de cliente: </label>
+            <input class="form-control form-select-sm" type="text" id="codigo_cliente" name="codigo_cliente" [(ngModel)]="cc">
+        </div>
+        <div class="col col-md-2">
+            <button class="btn btn-dark bajar" (click)="buscarCliente(cc)">Buscar</button>
+        </div>
+        <div class="col col-md-5 bajar">
+            <label >{{nombre}},<br>{{paisOrigen}}</label>
+        </div>
+    </div>
+    <div class="row bajar">
+        <div class="col align-items-center">
+            <label for="paises" class="form-label">Seleccione país de destino:</label>
+            <select name="paises" id="paises" class="form-select form-select-sm" [(ngModel)]="paisDestino">
+                <option *ngFor="let pais of paises" value="{{pais.idRegion}}">{{pais.nombrePais}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row bajar">
+        <div class="col align-items-center">
+            <label for="peso">Peso (lbs):</label>
+            <input [(ngModel)]="peso" class="form-control form-control-sm" type="number" step=".01" name="peso">
+        </div>
+        <div class="col align-items-center">
+            <label for="alto">Alto (cm):</label>
+            <input [(ngModel)]="alto" class="form-control form-control-sm" type="number" step=".01" name="alto">
+        </div>
+        <div class="col align-items-center">
+            <label for="Largo">Largo (cm):</label>
+            <input [(ngModel)]="largo" class="form-control form-control-sm" type="number" step=".01" name="largo">
+        </div>
+        <div class="col align-items-center">
+            <label for="ancho">Ancho (cm):</label>
+            <input [(ngModel)]="ancho" class="form-control form-control-sm" type="number" setp=".01" name="ancho">
+        </div>
+    </div>
+    <br>
+    <div class="row bajar">
+        <div class="col align-items-center">
+            <button class="btn btn-success" (click)="cotizar(paisDestino)">Cotizar</button>
+        </div>
+        <div class="col align-items-center">
+            <h2>${{resultado}}</h2><p>[{{resultadoMensaje}}]</p>
+        </div>
+    </div>
+</form>
